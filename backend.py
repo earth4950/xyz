@@ -21,7 +21,7 @@ def index():
 @app.route("/Predict" ,  methods=['POST'])
 def Predict():
     user_input = request.form['text']
-    df = pd.read_csv('https://raw.githubusercontent.com/earth4950/xyz/main/train.csv')
+    df = pd.read_csv('https://raw.githubusercontent.com/earth4950/datasetbig/main/train.csv')
     conversion_dict = {0: 'HQ', 1: 'LQ_EDIT', 2: 'LQ_CLOSE'}
     df['Body'] = df['Y'].replace(conversion_dict)
     # print(df.label.value_counts())
