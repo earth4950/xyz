@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for , Response
 
-
+from app import db
+db.create_all()
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import PassiveAggressiveClassifier
