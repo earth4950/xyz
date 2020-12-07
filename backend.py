@@ -45,7 +45,7 @@ def Predict():
     user_input_tranform = tfidf_vectorizer.transform([user_input])
     y_predict = pac.predict(user_input_tranform)
 
-    return render_template("Predict.html" , text = user_input , predict = y_predict );
+    return render_template("predict.html" , text = user_input , predict = y_predict );
 
 
 
